@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Suite Store</title>
+    <link rel="stylesheet" href="../css/index.css" />
+</head>
+
+    <body>
+        <div class="container">
+            <header class="header">
+                <h1><a href="index.html">Suite Store</a></h1>
+                <nav class="menu">
+                    <ul>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="category.html">Categories</a></li>
+                        <li><a href="history.html">History</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <section class="form-section">
+                <form class="form-index" id="index-form">
+
+                    <div class="form-select-product">
+                        <label>Product</label>
+                        <select id="product" name="product">
+                        </select>
+                        <p class="form-input-error error-hidden"></p>
+                    </div>
+
+                    <div class="form-input-amount">
+                        <label>Amount</label>
+                        <input type="text" id="amount" name="amount"placeholder=" e.g. 5">
+                        <p class="form-input-error error-hidden"></p>
+                    </div>
+
+                    <div class="form-input-unitprice">
+                        <label>Price ($)</label>
+                        <input type="number" disabled id="unit-price" name="unit-price" placeholder="Price">
+                        <p class="form-input-error error-hidden"></p>
+                    </div>
+
+                    <div class="form-input-tax">
+                        <label>Tax</label>
+                        <input type="number" disabled id="tax" name="tax" placeholder="Tax">
+                        <p class="form-input-error error-hidden"></p>
+                    </div>
+                    
+                    <div class="form-send">
+                        <button type="submit" class="button" id="button-add">Add Product</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="table-section">
+                <table id="table-index">
+                    <thead>
+                        <th>Product</th>
+                        <th>Unit price</th>
+                        <th>Amount</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </thead>
+
+                    <tbody id="tbody"></tbody>
+                </table>
+
+                <div class="totals">
+                    <p id="totalTax"></p>
+                    <p id="totalValue"></p>
+                </div>
+
+                <div class="actions">
+                    <button type="button" class="button-cancel" id="button-cancel" onclick="purchase.cancel()">Cancel</button>
+                    <button type="button" class="button-finish" onclick="purchase.finish()">Finish</button>
+                </div>
+            </section>
+
+        </div>
+
+        <script src="../scripts/index.js"></script>
+        <script src="../scripts/product.js"></script>
+    </body>
+
+</html>
